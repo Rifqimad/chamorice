@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang = "id">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title> Teknologi - CHAMORICE </title>
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+    <body>
+
+        <header class="navbar">
+            <div class = "brand-logo">
+                <img src="images/chamorice-logo.png" alt="CHAMORICE" class="navbar-logo-img">
+            </div>
+            <ul class = "nav-links">
+                <li><a href = "index.html"> Beranda </a></li>
+                <li><a href = "produk.html"> Produk </a></li>
+                <li><a href = "tentang.html"> Tentang Kami </a></li>
+                <li><a href = "teknologi.html" class = "active"> Teknologi </a></li>
+                <li><a href = "blog.html"> Blog </a></li>
+                <li><a href = "kontak.html"> Kontak </a></li>
+            </ul>
+            <div class = "nav-actions">
+                <button class = "cart-icon"> 🛒 </button>
+                <a href = "login.html" class = "btn-login"> Masuk </a>
+            </div>
+        </header>
+ 
+<section class="tech-section">
+ 
+  <div class="tech-intro reveal">
+    <h1>Teknologi CHAMORICE</h1>
+    <p>Inovasi untuk kualitas, keamanan, dan transparansi produk.</p>
+ 
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-icon">⚙️</div>
+        <div>
+          <h3>Saponifikasi Modern</h3>
+          <p>Proses dengan kontrol suhu optimum untuk menjaga kualitas minyak bekatul dan kelembutan sabun.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌾</div>
+        <div>
+          <h3>Ekstraksi Minyak Bekatul</h3>
+          <p>Minyak bekatul diekstrak dari bekatul pilihan dengan teknologi terkini.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌼</div>
+        <div>
+          <h3>Aroma Chamomile Premium</h3>
+          <p>Fragrance chamomile dari bahan alami untuk relaksasi maksimal.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">✔️</div>
+        <div>
+          <h3>Quality Control Ketat</h3>
+          <p>Setiap batch diuji pH, kemasan, keamanan dan konsistensi produk.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="diagram-wrap reveal">
+    <div class="orbit-ring"></div>
+ 
+    <div class="callout c-top-left">
+      <div class="callout-badge">🌿</div>
+      <h4>Aroma Chamomile<br>Natural Fragrance</h4>
+    </div>
+ 
+    <div class="callout c-top-right">
+      <div class="callout-badge">⚖️</div>
+      <h4>pH Seimbang<br>Lembut di Kulit</h4>
+    </div>
+ 
+    <div class="callout c-mid-left">
+      <div class="callout-badge">🌾</div>
+      <h4>Minyak Bekatul<br>Nutrisi Tinggi</h4>
+    </div>
+ 
+    <div class="callout c-mid-right">
+      <div class="callout-badge">💧</div>
+      <h4>Formula Lembut<br>Aman untuk Keluarga</h4>
+    </div>
+ 
+    <div class="product-platform">
+      <img src="images/chamorice-bottle-nobg.png" alt="CHAMORICE Liquid Soap" class="product-platform-img">
+      <div class="platform-shadow"></div>
+    </div>
+  </div>
+ 
+</section>
+ 
+<div class="tagline-bar reveal">
+  Inovasi bertemu alam, untuk kulit sehat dan bumi yang lebih baik.
+</div>
+ 
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+<script src="script.js"></script>
+    </body>
+</html>

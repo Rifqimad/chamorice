@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun Saya - CHAMORICE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="brand-logo">
+            <img src="images/chamorice-logo.png" alt="CHAMORICE" class="navbar-logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="teknologi.html">Teknologi</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="cart-icon">🛒</button>
+            <a href="#" class="btn-login logout-action">Keluar</a>
+        </div>
+    </header>
+
+    <!-- KONTEN AKUN -->
+    <main class="page-container">
+        <div class="account-wrapper">
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active">📊 Dashboard</a></li>
+                <li><a href="#">📦 Pesanan Saya</a></li>
+                <li><a href="#">👤 Profil Saya</a></li>
+                <li><a href="#" class="logout-action">🚪 Keluar</a></li>
+            </ul>
+
+            <div class="account-content">
+                <h1 id="accountGreeting">Halo, Sahabat CHAMORICE! 👋</h1>
+                <p>Selamat datang kembali di akun CHAMORICE Anda.</p>
+
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-val">12</div>
+                        <div class="stat-lbl">Total Pesanan</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-val">2</div>
+                        <div class="stat-lbl">Sedang Diproses</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-val">350</div>
+                        <div class="stat-lbl">Poin Reward</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-val">Rp 1.240.000</div>
+                        <div class="stat-lbl">Total Belanja</div>
+                    </div>
+                </div>
+
+                <h3>Pesanan Terbaru</h3>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>No. Pesanan</th>
+                            <th>Produk</th>
+                            <th>Tanggal</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#CR-1042</td>
+                            <td>Chamomile Liquid Soap</td>
+                            <td>10 Agu 2026</td>
+                            <td><span class="badge badge-shipped">Dikirim</span></td>
+                        </tr>
+                        <tr>
+                            <td>#CR-1038</td>
+                            <td>Family Care</td>
+                            <td>2 Agu 2026</td>
+                            <td><span class="badge badge-done">Selesai</span></td>
+                        </tr>
+                        <tr>
+                            <td>#CR-1035</td>
+                            <td>Calm & Relax Bundle</td>
+                            <td>28 Jul 2026</td>
+                            <td><span class="badge badge-process">Diproses</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-col">
+                <div class="brand-logo" style="margin-bottom: 12px;">
+                    <div class="logo-text" style="color:#fff;">CHAMORICE</div>
+                </div>
+                <p style="font-size: 11px; opacity: 0.8; line-height: 1.6;">
+                    CHAMORICE menghadirkan sabun cair alami dari kebaikan minyak bekatul dan aroma chamomile untuk perawatan keluarga.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="tentang.html">Tentang Kami</a></li>
+                    <li><a href="teknologi.html">Teknologi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="kontak.html">FAQ & Kontak</a></li>
+                    <li>Syarat & Ketentuan</li>
+                    <li>Kebijakan Privasi</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dapatkan Info & Promo Terbaru!</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Masukkan email Anda">
+                    <button type="submit">Langganan</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 CHAMORICE. All rights reserved.</p>
+            <div class="footer-badges">
+                <span>🛡️ Aman</span>
+                <span>🤝 Terpercaya</span>
+                <span>🌿 Berkelanjutan</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const chamoriceUser = JSON.parse(localStorage.getItem('chamoriceUser') || 'null');
+        if (chamoriceUser && chamoriceUser.email) {
+            const namePart = chamoriceUser.email.split('@')[0];
+            const displayName = namePart
+                .replace(/[._-]+/g, ' ')
+                .split(' ')
+                .filter(Boolean)
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+            document.getElementById('accountGreeting').textContent = 'Halo, ' + displayName + '! 👋';
+        }
+    </script>
+</body>
+</html>

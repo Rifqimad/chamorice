@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Keaslian - CHAMORICE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="brand-logo">
+            <img src="images/chamorice-logo.png" alt="CHAMORICE" class="navbar-logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="teknologi.html">Teknologi</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="keaslian.html" class="active">Cek Keaslian</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="cart-icon">🛒</button>
+            <a href="login.html" class="btn-login">Masuk</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-container">
+            <div class="section-header">
+                <h2>Cek Keaslian Produk CHAMORICE</h2>
+                <p>Pastikan produk CHAMORICE yang Anda beli 100% asli dan aman.</p>
+            </div>
+
+            <div class="auth-box-wrapper">
+                <div class="auth-steps">
+                    <h3 style="color: var(--green-primary); margin-bottom: 12px; font-size: 16px;">Langkah Mudah</h3>
+                    <ol>
+                        <li>Temukan Kode QR atau kode unik pada label produk.</li>
+                        <li>Masukkan Kode unik di kolom samping.</li>
+                        <li>Lihat Hasil informasi keaslian produk Anda.</li>
+                    </ol>
+                </div>
+
+                <div class="auth-form-card">
+                    <form id="verifyForm">
+                        <div class="form-group">
+                            <label for="code">Masukkan Kode Keaslian</label>
+                            <input type="text" id="code" class="form-control" placeholder="Contoh: CR24A05-00123" required>
+                        </div>
+                        <button type="submit" class="btn btn-solid btn-block">Cek Keaslian</button>
+                    </form>
+
+                    <div id="authResult"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom" style="border:none; padding:0;">
+            <p>© 2026 CHAMORICE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
