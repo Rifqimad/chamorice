@@ -967,6 +967,13 @@ textarea.form-control {
     color: var(--green-primary);
 }
 
+.form-error {
+    font-size: 11px;
+    color: #C0392B;
+    margin: -8px 0 14px;
+    min-height: 14px;
+}
+
 /* ---------- AKUN / DASHBOARD ---------- */
 .account-content h1 {
     font-size: 22px;

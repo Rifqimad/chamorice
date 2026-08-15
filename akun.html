@@ -145,7 +145,7 @@
     <script>
         const chamoriceUser = JSON.parse(localStorage.getItem('chamoriceUser') || 'null');
         if (chamoriceUser && chamoriceUser.email) {
-            const namePart = chamoriceUser.email.split('@')[0];
+            const namePart = (chamoriceUser.name && chamoriceUser.name.trim()) || chamoriceUser.email.split('@')[0];
             const displayName = namePart
                 .replace(/[._-]+/g, ' ')
                 .split(' ')
