@@ -5,20 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const verifyForm = document.getElementById('verifyForm');
     const authResult = document.getElementById('authResult');
 
-    const validCodes = ['CR24A05-00123', 'CR24A05-00124', 'CHAMORICE2026'];
+    const validCodes = {
+        'CR24A05-00123': { name: 'Chamomile Liquid Soap', produced: 'Januari 2026', expiry: 'Januari 2028' },
+        'CR24A05-00124': { name: 'Family Care', produced: 'Februari 2026', expiry: 'Februari 2028' },
+        'CHAMORICE2026': { name: 'Calm & Relax Bundle', produced: 'Maret 2026', expiry: 'Maret 2028' }
+    };
 
     if (verifyForm) {
         verifyForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const inputVal = document.getElementById('code').value.trim();
-            
-            if (validCodes.includes(inputVal)) {
+            const product = validCodes[inputVal];
+
+            if (product) {
                 authResult.className = 'auth-result-card success';
                 authResult.innerHTML = `
                     <div style="font-size: 20px;">✓</div>
                     <div>
                         <strong>Produk Asli Terverifikasi</strong><br>
-                        Terima kasih! Produk CHAMORICE ini asli dan terdaftar resmi di laboratorium.
+                        Terima kasih! ${product.name} ini asli dan terdaftar resmi di laboratorium.
+                        <div class="auth-result-dates">
+                            <span>📅 Tanggal Produksi: <strong>${product.produced}</strong></span>
+                            <span>⏳ Tanggal Kadaluarsa: <strong>${product.expiry}</strong></span>
+                        </div>
                     </div>
                 `;
             } else {

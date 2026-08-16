@@ -28,6 +28,13 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     zoom: 1.5;
+    min-height: calc(100vh / 1.5);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 a {
@@ -562,15 +569,34 @@ a {
     padding: 14px;
     border-radius: var(--radius-sm);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     font-size: 12px;
 }
 
 .auth-result-card.success {
+    background-color: #EEF6EC;
+    border: 1px solid #A9CDA1;
+    color: #2D4A27;
+}
+
+.auth-result-card.error {
     background-color: #FDF2F2;
     border: 1px solid #F29D9D;
     color: #9B1C1C;
+}
+
+.auth-result-dates {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    color: #2D4A27;
+}
+
+.auth-result-dates strong {
+    font-weight: 700;
 }
 
 .contact-grid {
@@ -972,6 +998,26 @@ textarea.form-control {
     color: #C0392B;
     margin: -8px 0 14px;
     min-height: 14px;
+}
+
+.auth-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+    background-color: #FBF3D9;
+    border: 1px solid #E9D8AF;
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    margin-top: 18px;
+    font-size: 11px;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.auth-notice-icon {
+    font-size: 13px;
+    line-height: 1.6;
 }
 
 /* ---------- AKUN / DASHBOARD ---------- */
@@ -1500,6 +1546,7 @@ textarea.form-control {
   }
  
   .hero-image svg{width:100%; height:100%; display:block;}
+  .hero-image img{width:100%; height:100%; object-fit:cover; display:block;}
  
   /* ---------- NILAI KAMI ---------- */
   .values{
