@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beranda - CHAMORICE</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
 
@@ -15,17 +15,20 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Beranda</a></li>
-            <li><a href="produk.html">Produk</a></li>
-            <li><a href="tentang.html">Tentang Kami</a></li>
-            <li><a href="teknologi.html">Teknologi</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="keaslian.html">Cek Keaslian</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="pages/produk.html">Produk</a></li>
+            <li><a href="pages/tentang.html">Tentang Kami</a></li>
+            <li><a href="pages/teknologi.html">Teknologi</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
+            <li><a href="pages/keaslian.html">Cek Keaslian</a></li>
+            <li><a href="pages/kontak.html">Kontak</a></li>
         </ul>
         <div class="nav-actions">
             <button class="cart-icon">🛒</button>
-            <a href="login.html" class="btn-login">Masuk</a>
+            <a href="pages/login.html" class="btn-login">Masuk</a>
         </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <!-- PAGE CONTENT -->
@@ -37,8 +40,8 @@
                     <h1 class="hero-title">Sabun Cair Alami<br>dari Kebaikan Bekatul<br>dengan <span>Aroma Chamomile</span></h1>
                     <p class="hero-desc">CHAMORICE Sabun Cair dipersonalisasi menggunakan minyak bekatul pilihan yang lembut di kulit dan diperkaya dengan fragrance chamomile untuk kesegaran dan relaksasi alami.</p>
                     <div class="hero-buttons">
-                        <a href="produk.html" class="btn btn-solid">Lihat Produk</a>
-                        <a href="keaslian.html" class="btn btn-outline">Lacak Keaslian</a>
+                        <a href="pages/produk.html" class="btn btn-solid">Lihat Produk</a>
+                        <a href="pages/keaslian.html" class="btn btn-outline">Lacak Keaslian</a>
                     </div>
                 </div>
                 <div class="hero-image-box">
@@ -94,15 +97,15 @@
                 <h4>Menu</h4>
                 <ul>
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="produk.html">Produk</a></li>
-                    <li><a href="tentang.html">Tentang Kami</a></li>
-                    <li><a href="teknologi.html">Teknologi</a></li>
+                    <li><a href="pages/produk.html">Produk</a></li>
+                    <li><a href="pages/tentang.html">Tentang Kami</a></li>
+                    <li><a href="pages/teknologi.html">Teknologi</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Bantuan</h4>
                 <ul>
-                    <li><a href="kontak.html">FAQ & Kontak</a></li>
+                    <li><a href="pages/kontak.html">FAQ & Kontak</a></li>
                     <li>Syarat & Ketentuan</li>
                     <li>Kebijakan Privasi</li>
                 </ul>

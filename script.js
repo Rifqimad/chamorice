@@ -1,6 +1,24 @@
 // CHAMORICE Interactivity Logic
 document.addEventListener('DOMContentLoaded', () => {
 
+    // 0. Mobile Nav Toggle (Hamburger Menu)
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
     // 1. Authenticity Code Checker (Module 5)
     const verifyForm = document.getElementById('verifyForm');
     const authResult = document.getElementById('authResult');
@@ -54,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Cart Modal Mockup
     const cartItemsData = [
-        { name: 'Chamomile Liquid Soap', img: 'images/card-liquid-soap.jpg', qty: 1, price: 29000 },
-        { name: 'Family Care', img: 'images/card-liquid-soap.jpg', qty: 1, price: 68000 }
+        { name: 'Chamomile Liquid Soap', img: '/images/card-liquid-soap.jpg', qty: 1, price: 29000 },
+        { name: 'Family Care', img: '/images/card-liquid-soap.jpg', qty: 1, price: 68000 }
     ];
 
     function formatRupiah(num) {
@@ -139,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const loggedInUser = JSON.parse(localStorage.getItem('chamoriceUser') || 'null');
         if (loggedInUser) {
             loginBtn.textContent = 'Akun Saya';
-            loginBtn.href = 'akun.html';
+            loginBtn.href = '/pages/akun.html';
         }
     }
 
@@ -147,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             localStorage.removeItem('chamoriceUser');
-            window.location.href = 'index.html';
+            window.location.href = '/index.html';
         });
     });
 

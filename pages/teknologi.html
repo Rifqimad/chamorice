@@ -4,16 +4,16 @@
         <meta charset = "UTF-8">
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <title> Teknologi - CHAMORICE </title>
-        <link rel = "stylesheet" href = "style.css">
+        <link rel="stylesheet" href="../src/style.css">
     </head>
     <body>
 
         <header class="navbar">
             <div class = "brand-logo">
-                <img src="images/chamorice-logo.png" alt="CHAMORICE" class="navbar-logo-img">
+                <img src="../images/chamorice-logo.png" alt="CHAMORICE" class="navbar-logo-img">
             </div>
             <ul class = "nav-links">
-                <li><a href = "index.html"> Beranda </a></li>
+                <li><a href = "../index.html"> Beranda </a></li>
                 <li><a href = "produk.html"> Produk </a></li>
                 <li><a href = "tentang.html"> Tentang Kami </a></li>
                 <li><a href = "teknologi.html" class = "active"> Teknologi </a></li>
@@ -24,6 +24,9 @@
                 <button class = "cart-icon"> 🛒 </button>
                 <a href = "login.html" class = "btn-login"> Masuk </a>
             </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </header>
  
 <section class="tech-section">
@@ -88,7 +91,7 @@
     </div>
  
     <div class="product-platform">
-      <img src="images/chamorice-bottle-nobg.png" alt="CHAMORICE Liquid Soap" class="product-platform-img">
+      <img src="../images/chamorice-bottle-nobg.png" alt="CHAMORICE Liquid Soap" class="product-platform-img">
       <div class="platform-shadow"></div>
     </div>
   </div>
@@ -111,6 +114,6 @@
   }, { threshold: 0.12 });
   revealEls.forEach(el => observer.observe(el));
 </script>
-<script src="script.js"></script>
+<script src="../script.js"></script>
     </body>
 </html>
