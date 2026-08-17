@@ -2069,6 +2069,7 @@ img {
 @media (max-width: 860px) {
     .navbar, header.navbar {
         flex-wrap: wrap;
+        justify-content: flex-start;
         padding: 14px 20px;
         row-gap: 10px;
     }
@@ -2079,11 +2080,13 @@ img {
 
     .nav-toggle {
         display: flex;
+        margin-left: 10px;
     }
 
     .nav-actions {
         order: 2;
         gap: 12px;
+        margin-left: auto;
     }
 
     header.navbar nav,
